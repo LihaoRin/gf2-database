@@ -105,23 +105,48 @@ function DetailGallerySection({
 
   function getGalleryCardClass() {
     const ratios = Object.values(galleryImageRatios);
+    const count = shouldStackLeadingImages() ? group.images.length - 1 : group.images.length;
 
-    if (ratios.length === 0) {
-      return "min-h-[250px]";
+    if (ratios.length === 0 || count <= 0) {
+      return "min-h-[210px]";
     }
 
     const widestRatio = Math.max(...ratios);
     const tallestRatio = Math.min(...ratios);
 
+    if (count >= 5) {
+      if (widestRatio >= 1.2) {
+        return "min-h-[205px]";
+      }
+
+      if (tallestRatio <= 0.72) {
+        return "min-h-[235px]";
+      }
+
+      return "min-h-[220px]";
+    }
+
+    if (count === 4) {
+      if (widestRatio >= 1.2) {
+        return "min-h-[220px]";
+      }
+
+      if (tallestRatio <= 0.72) {
+        return "min-h-[250px]";
+      }
+
+      return "min-h-[235px]";
+    }
+
     if (widestRatio >= 1.2) {
-      return "min-h-[240px]";
+      return "min-h-[235px]";
     }
 
     if (tallestRatio <= 0.72) {
-      return "min-h-[280px]";
+      return "min-h-[265px]";
     }
 
-    return "min-h-[260px]";
+    return "min-h-[245px]";
   }
 
   function getGalleryImageClass(image: CharacterDetailGalleryImage) {
@@ -136,10 +161,10 @@ function DetailGallerySection({
 
     const longestSide = Math.max(meta.width, meta.height);
     if (longestSide > 1500) {
-      return "max-h-[700px] w-auto scale-[2.1]";
+      return "max-h-[620px] w-auto scale-[2]";
     }
 
-    return "max-h-[620px] w-full";
+    return "max-h-[360px] w-full";
   }
 
   function getGalleryGridClass() {
@@ -232,7 +257,7 @@ function DetailGallerySection({
         }`}
       >
         {stackLeadingImages ? (
-          <div className={`grid gap-4 ${galleryCardClass}`}>
+          <div className={`grid content-start gap-4 ${galleryCardClass}`}>
             {renderGalleryButton(group.images[0], 0, "min-h-0 h-full")}
             {renderGalleryButton(group.images[1], 1, "min-h-0 h-full")}
           </div>
@@ -394,7 +419,7 @@ export default function CharacterDetailPage({
 
         <div className="grid gap-6 p-5 lg:grid-cols-[360px_minmax(0,1fr)]">
           <div className="space-y-4">
-            <div className="gf2-media-frame relative block aspect-[4/5] w-full overflow-hidden border border-[var(--gf2-line-strong)]">
+            <div className="gf2-media-frame relative block aspect-[7/10] w-full overflow-hidden border border-[var(--gf2-line-strong)]">
               <Image
                 src={character.image}
                 alt={displayName}
