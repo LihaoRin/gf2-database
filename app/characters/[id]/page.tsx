@@ -5,7 +5,6 @@ import CharacterDetailPage from "@/components/CharacterDetailPage";
 import characters from "@/data/characters.json";
 import characterDetails from "@/data/character-details.json";
 import type { Character, CharacterDetail } from "@/lib/types";
-import { getCharacterDetailAssets } from "@/lib/character-detail-assets";
 
 const characterList = characters as Character[];
 const detailList = characterDetails as CharacterDetail[];
@@ -30,7 +29,9 @@ function createFallbackDetail(character: Character): CharacterDetail {
     weaponNameEn: "",
     weaponImage: "",
     weaponDescription: "",
-    equipmentNote: ""
+    equipmentNote: "",
+    galleries: [],
+    weaponImages: []
   };
 }
 
@@ -50,14 +51,13 @@ export default async function CharacterDetailRoute({
   const detail =
     detailList.find((entry) => entry.id === numericId) ??
     createFallbackDetail(character);
-  const assets = await getCharacterDetailAssets(numericId);
 
   return (
     <CharacterDetailPage
       character={character}
       detail={detail}
-      galleries={assets.galleries}
-      weaponImages={assets.weaponImages}
+      galleries={detail.galleries}
+      weaponImages={detail.weaponImages}
     />
   );
 }

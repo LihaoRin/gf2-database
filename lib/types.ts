@@ -40,4 +40,6 @@ export type CharacterDetail = {
   weaponImage: string;
   weaponDescription: string;
   equipmentNote: string;
+  galleries: CharacterDetailGalleryGroup[];
+  weaponImages: string[];
 };
