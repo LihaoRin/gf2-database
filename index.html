@@ -1,3 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>GF2 Database</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .search {
+      margin: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 200px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>GF2 Character Database</h1>
+
+<div class="search">
+  <input type="text" placeholder="Search character...">
+</div>
+
 <div class="grid" id="characterGrid"></div>
 
 <script>
@@ -6,6 +57,7 @@ async function loadCharacters() {
   const data = await res.json();
 
   const grid = document.getElementById('characterGrid');
+  grid.innerHTML = "";
 
   data.forEach(char => {
     const card = document.createElement('div');
@@ -22,3 +74,6 @@ async function loadCharacters() {
 
 loadCharacters();
 </script>
+
+</body>
+</html>
