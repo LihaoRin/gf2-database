@@ -1,61 +1,24 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>GF2 Database</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
-    .search {
-      margin: 20px;
-    }
-    input {
-      padding: 10px;
-      width: 200px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 20px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 10px;
-      border-radius: 10px;
-    }
-    img {
-      width: 100%;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
+<div class="grid" id="characterGrid"></div>
 
-<h1>GF2 Character Database</h1>
+<script>
+async function loadCharacters() {
+  const res = await fetch('characters.json');
+  const data = await res.json();
 
-<div class="search">
-  <input type="text" placeholder="Search character...">
-</div>
+  const grid = document.getElementById('characterGrid');
 
-<div class="grid">
-  <div class="card">
-    <img src="https://via.placeholder.com/200">
-    <p>Character A</p>
-  </div>
-  <div class="card">
-    <img src="https://via.placeholder.com/200">
-    <p>Character B</p>
-  </div>
-  <div class="card">
-    <img src="https://via.placeholder.com/200">
-    <p>Character C</p>
-  </div>
-</div>
+  data.forEach(char => {
+    const card = document.createElement('div');
+    card.className = 'card';
 
-</body>
-</html>
+    card.innerHTML = `
+      <img src="${char.image}">
+      <p>${char.name}</p>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+loadCharacters();
+</script>
