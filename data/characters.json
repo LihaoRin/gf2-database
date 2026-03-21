@@ -1,0 +1,515 @@
+[
+  {
+    "id": 1,
+    "image": "/images/1.png",
+    "name": {
+      "zh": "埃芙",
+      "ja": "アルヴァ",
+      "en": "Alva"
+    }
+  },
+  {
+    "id": 2,
+    "image": "/images/2.png",
+    "name": {
+      "zh": "安朵丝",
+      "ja": "アンドリス",
+      "en": ""
+    }
+  },
+  {
+    "id": 3,
+    "image": "/images/3.png",
+    "name": {
+      "zh": "纳美西丝·衍光",
+      "ja": "ネメシス・グノーシス",
+      "en": ""
+    }
+  },
+  {
+    "id": 4,
+    "image": "/images/4.png",
+    "name": {
+      "zh": "OTs-14",
+      "ja": "OTs-14",
+      "en": "OTs-14"
+    }
+  },
+  {
+    "id": 5,
+    "image": "/images/5.png",
+    "name": {
+      "zh": "六分仪",
+      "ja": "セクスタンス",
+      "en": ""
+    }
+  },
+  {
+    "id": 6,
+    "image": "/images/6.png",
+    "name": {
+      "zh": "刘莳",
+      "ja": "劉蒔（りゅうし）",
+      "en": ""
+    }
+  },
+  {
+    "id": 7,
+    "image": "/images/7.png",
+    "name": {
+      "zh": "贝丝蒂",
+      "ja": "バスティ",
+      "en": ""
+    }
+  },
+  {
+    "id": 8,
+    "image": "/images/8.png",
+    "name": {
+      "zh": "夏安",
+      "ja": "シャイアン",
+      "en": ""
+    }
+  },
+  {
+    "id": 9,
+    "image": "/images/9.png",
+    "name": {
+      "zh": "罗蕾莱",
+      "ja": "ローレライ",
+      "en": ""
+    }
+  },
+  {
+    "id": 10,
+    "image": "/images/10.png",
+    "name": {
+      "zh": "樱花",
+      "ja": "サクラ",
+      "en": ""
+    }
+  },
+  {
+    "id": 11,
+    "image": "/images/11.png",
+    "name": {
+      "zh": "海伦",
+      "ja": "ヘレン",
+      "en": ""
+    }
+  },
+  {
+    "id": 12,
+    "image": "/images/12.png",
+    "name": {
+      "zh": "威玛西娜",
+      "ja": "ヴォイマスティナ",
+      "en": ""
+    }
+  },
+  {
+    "id": 13,
+    "image": "/images/13.png",
+    "name": {
+      "zh": "芙洛伦",
+      "ja": "フローレンス",
+      "en": ""
+    }
+  },
+  {
+    "id": 14,
+    "image": "/images/14.png",
+    "name": {
+      "zh": "刘易斯",
+      "ja": "ルイス",
+      "en": ""
+    }
+  },
+  {
+    "id": 15,
+    "image": "/images/15.png",
+    "name": {
+      "zh": "巴希达",
+      "ja": "バチルダ",
+      "en": ""
+    }
+  },
+  {
+    "id": 16,
+    "image": "/images/16.png",
+    "name": {
+      "zh": "翡图萨",
+      "ja": "パエトゥーサ",
+      "en": ""
+    }
+  },
+  {
+    "id": 17,
+    "image": "/images/17.png",
+    "name": {
+      "zh": "琳德",
+      "ja": "リンド",
+      "en": ""
+    }
+  },
+  {
+    "id": 18,
+    "image": "/images/18.png",
+    "name": {
+      "zh": "莱妮",
+      "ja": "レイニー",
+      "en": ""
+    }
+  },
+  {
+    "id": 19,
+    "image": "/images/19.png",
+    "name": {
+      "zh": "洛贝拉",
+      "ja": "ロベラ",
+      "en": ""
+    }
+  },
+  {
+    "id": 20,
+    "image": "/images/20.png",
+    "name": {
+      "zh": "莱娅",
+      "ja": "リヴァ",
+      "en": ""
+    }
+  },
+  {
+    "id": 21,
+    "image": "/images/21.png",
+    "name": {
+      "zh": "妮基塔",
+      "ja": "ニキータ",
+      "en": ""
+    }
+  },
+  {
+    "id": 22,
+    "image": "/images/22.png",
+    "name": {
+      "zh": "幼熙",
+      "ja": "幼熙",
+      "en": ""
+    }
+  },
+  {
+    "id": 23,
+    "image": "/images/23.png",
+    "name": {
+      "zh": "佩莉",
+      "ja": "ペリー",
+      "en": ""
+    }
+  },
+  {
+    "id": 24,
+    "image": "/images/24.png",
+    "name": {
+      "zh": "可露凯",
+      "ja": "クルカイ",
+      "en": ""
+    }
+  },
+  {
+    "id": 25,
+    "image": "/images/25.png",
+    "name": {
+      "zh": "米什缇",
+      "ja": "ミシュティ",
+      "en": ""
+    }
+  },
+  {
+    "id": 26,
+    "image": "/images/26.png",
+    "name": {
+      "zh": "朝晖",
+      "ja": "朝暉（ちょうき）",
+      "en": ""
+    }
+  },
+  {
+    "id": 27,
+    "image": "/images/27.png",
+    "name": {
+      "zh": "哈卜茜",
+      "ja": "ハープシー",
+      "en": ""
+    }
+  },
+  {
+    "id": 28,
+    "image": "/images/28.png",
+    "name": {
+      "zh": "秋桦",
+      "ja": "秋樺",
+      "en": ""
+    }
+  },
+  {
+    "id": 29,
+    "image": "/images/29.png",
+    "name": {
+      "zh": "春田",
+      "ja": "スプリングフィールド",
+      "en": ""
+    }
+  },
+  {
+    "id": 30,
+    "image": "/images/30.png",
+    "name": {
+      "zh": "比悠卡",
+      "ja": "ビヨーカ",
+      "en": ""
+    }
+  },
+  {
+    "id": 31,
+    "image": "/images/31.png",
+    "name": {
+      "zh": "维克托",
+      "ja": "ヴェクター",
+      "en": ""
+    }
+  },
+  {
+    "id": 32,
+    "image": "/images/32.png",
+    "name": {
+      "zh": "绯",
+      "ja": "緋（フェイ）",
+      "en": ""
+    }
+  },
+  {
+    "id": 33,
+    "image": "/images/33.png",
+    "name": {
+      "zh": "波波沙",
+      "ja": "ぺーぺーシャ",
+      "en": ""
+    }
+  },
+  {
+    "id": 34,
+    "image": "/images/34.png",
+    "name": {
+      "zh": "索米",
+      "ja": "スオミ",
+      "en": ""
+    }
+  },
+  {
+    "id": 35,
+    "image": "/images/35.png",
+    "name": {
+      "zh": "乌尔丽德",
+      "ja": "ウルリド",
+      "en": ""
+    }
+  },
+  {
+    "id": 36,
+    "image": "/images/36.png",
+    "name": {
+      "zh": "绛雨",
+      "ja": "絳雨（こうう）",
+      "en": ""
+    }
+  },
+  {
+    "id": 37,
+    "image": "/images/37.png",
+    "name": {
+      "zh": "玛绮朵",
+      "ja": "マキアート",
+      "en": ""
+    }
+  },
+  {
+    "id": 38,
+    "image": "/images/38.png",
+    "name": {
+      "zh": "莫辛纳甘",
+      "ja": "モシンナガン",
+      "en": ""
+    }
+  },
+  {
+    "id": 39,
+    "image": "/images/39.png",
+    "name": {
+      "zh": "黛烟",
+      "ja": "黛煙（だいえん）",
+      "en": ""
+    }
+  },
+  {
+    "id": 40,
+    "image": "/images/40.png",
+    "name": {
+      "zh": "桑朵莱希",
+      "ja": "センタウレイシー",
+      "en": ""
+    }
+  },
+  {
+    "id": 41,
+    "image": "/images/41.png",
+    "name": {
+      "zh": "琼玖",
+      "ja": "瓊玖（けいきゅう）",
+      "en": ""
+    }
+  },
+  {
+    "id": 42,
+    "image": "/images/42.png",
+    "name": {
+      "zh": "塞布丽娜",
+      "ja": "サブリナ",
+      "en": ""
+    }
+  },
+  {
+    "id": 43,
+    "image": "/images/43.png",
+    "name": {
+      "zh": "托洛洛",
+      "ja": "トロロ",
+      "en": ""
+    }
+  },
+  {
+    "id": 44,
+    "image": "/images/44.png",
+    "name": {
+      "zh": "杜莎妮",
+      "ja": "ドゥシェーヴヌイ",
+      "en": ""
+    }
+  },
+  {
+    "id": 45,
+    "image": "/images/45.png",
+    "name": {
+      "zh": "佩里缇亚",
+      "ja": "ペリティア",
+      "en": ""
+    }
+  },
+  {
+    "id": 46,
+    "image": "/images/46.png",
+    "name": {
+      "zh": "莱娜",
+      "ja": "レナ",
+      "en": ""
+    }
+  },
+  {
+    "id": 47,
+    "image": "/images/47.png",
+    "name": {
+      "zh": "维普蕾",
+      "ja": "ヴェプリー",
+      "en": ""
+    }
+  },
+  {
+    "id": 48,
+    "image": "/images/48.png",
+    "name": {
+      "zh": "洛塔",
+      "ja": "ロッタ",
+      "en": ""
+    }
+  },
+  {
+    "id": 49,
+    "image": "/images/49.png",
+    "name": {
+      "zh": "莉塔拉",
+      "ja": "リッタラ",
+      "en": ""
+    }
+  },
+  {
+    "id": 50,
+    "image": "/images/50.png",
+    "name": {
+      "zh": "科谢尼娅",
+      "ja": "クシーニヤ",
+      "en": ""
+    }
+  },
+  {
+    "id": 51,
+    "image": "/images/51.png",
+    "name": {
+      "zh": "纳甘",
+      "ja": "ナガン",
+      "en": ""
+    }
+  },
+  {
+    "id": 52,
+    "image": "/images/52.png",
+    "name": {
+      "zh": "奇塔",
+      "ja": "チータ",
+      "en": ""
+    }
+  },
+  {
+    "id": 53,
+    "image": "/images/53.png",
+    "name": {
+      "zh": "夏克里",
+      "ja": "シャークリー",
+      "en": ""
+    }
+  },
+  {
+    "id": 54,
+    "image": "/images/54.png",
+    "name": {
+      "zh": "纳美西丝",
+      "ja": "ネメシス",
+      "en": ""
+    }
+  },
+  {
+    "id": 55,
+    "image": "/images/55.png",
+    "name": {
+      "zh": "闪电",
+      "ja": "グローザ",
+      "en": ""
+    }
+  },
+  {
+    "id": 56,
+    "image": "/images/56.png",
+    "name": {
+      "zh": "寇尔芙",
+      "ja": "コルフェン",
+      "en": ""
+    }
+  },
+  {
+    "id": 57,
+    "image": "/images/57.png",
+    "name": {
+      "zh": "克罗丽科",
+      "ja": "キャロリック",
+      "en": ""
+    }
+  }
+]

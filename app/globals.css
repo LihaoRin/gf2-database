@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --gf2-bg: #06080c;
+  --gf2-bg-soft: #0c1118;
+  --gf2-panel: rgba(10, 14, 19, 0.94);
+  --gf2-panel-strong: rgba(12, 17, 23, 0.98);
+  --gf2-panel-deep: rgba(19, 25, 33, 0.98);
+  --gf2-line: rgba(215, 223, 232, 0.09);
+  --gf2-line-strong: rgba(215, 223, 232, 0.18);
+  --gf2-accent: #f08943;
+  --gf2-accent-strong: #ffab6f;
+  --gf2-accent-soft: rgba(240, 137, 67, 0.14);
+  --gf2-text: #f4f7fb;
+  --gf2-text-soft: #8f98a4;
+  --gf2-text-faint: #5f6874;
+  --gf2-shadow: rgba(0, 0, 0, 0.46);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.015)),
+    linear-gradient(180deg, #05070b 0%, #0b1017 46%, #05080d 100%);
+  color: var(--gf2-text);
+  font-family:
+    "Segoe UI", "Noto Sans TC", "Noto Sans JP", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 86%);
+  opacity: 0.32;
+}
+
+.gf2-detail-page {
+  position: relative;
+  isolation: isolate;
+}
+
+.gf2-detail-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(240, 137, 67, 0.08), transparent 20%),
+    radial-gradient(circle at 84% 12%, rgba(240, 137, 67, 0.05), transparent 16%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px);
+  background-size: auto, auto, 120px 120px, 120px 120px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.gf2-detail-shell {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 12%),
+    linear-gradient(180deg, rgba(11, 15, 20, 0.985) 0%, rgba(7, 10, 15, 0.985) 100%);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.42),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.gf2-detail-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(240, 137, 67, 0.28) 0 2px, transparent 2px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 120px);
+  opacity: 0.18;
+}
+
+.gf2-detail-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 88px 88px;
+  opacity: 0.12;
+}
+
+.gf2-detail-header {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent);
+}
+
+.gf2-detail-header::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(240, 137, 67, 0.55), rgba(255, 255, 255, 0.1) 18%, transparent 52%);
+}
+
+.gf2-kicker {
+  position: relative;
+  display: inline-block;
+  padding: 0.32rem 0.7rem 0.34rem;
+  border: 1px solid rgba(240, 137, 67, 0.28);
+  background:
+    linear-gradient(180deg, rgba(240, 137, 67, 0.08), transparent 70%),
+    rgba(255, 255, 255, 0.018);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 8px 18px rgba(0, 0, 0, 0.16);
+  color: var(--gf2-accent-strong);
+  font-weight: 800;
+}
+
+.gf2-hero-copy {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.gf2-hero-name {
+  display: inline-block;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #f4f7fb;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 28px rgba(255, 255, 255, 0.02);
+}
+
+.gf2-titlebar {
+  position: relative;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028), transparent 35%),
+    rgba(255, 255, 255, 0.022);
+}
+
+.gf2-titlebar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: rgba(240, 137, 67, 0.9);
+}
+
+.gf2-titlebar-text {
+  display: inline-block;
+  padding-left: 4px;
+}
+
+.gf2-overview {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02), transparent 42%),
+    rgba(7, 10, 15, 0.28);
+}
+
+.gf2-card {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 34%),
+    rgba(15, 19, 25, 0.88);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.gf2-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(240, 137, 67, 0.16), transparent 80px);
+  opacity: 0.2;
+}
+
+.gf2-card-label {
+  color: var(--gf2-accent-strong);
+  font-weight: 800;
+}
+
+.gf2-media-frame {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 28%),
+    rgba(13, 16, 21, 0.9);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 18px 36px rgba(0, 0, 0, 0.18);
+}
+
+.gf2-gallery {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18%),
+    rgba(10, 14, 19, 0.92);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 24px 48px rgba(0, 0, 0, 0.16);
+}
+
+.gf2-action {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 34%),
+    rgba(12, 17, 23, 0.98);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.gf2-action::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: rgba(240, 137, 67, 0.92);
+}
+
+.gf2-modal {
+  background:
+    radial-gradient(circle at top, rgba(240, 137, 67, 0.08), transparent 24%),
+    rgba(3, 5, 8, 0.92);
+}
+
+.gf2-modal-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 24%),
+    rgba(10, 14, 19, 0.96);
+  box-shadow:
+    0 24px 70px var(--gf2-shadow),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+html.export-mode .gf2-hero-name,
+html.export-mode .gf2-kicker,
+html.export-mode .gf2-card-label,
+html.export-mode .gf2-titlebar-text {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.export-mode .gf2-hero-name {
+  text-shadow: none;
+}
