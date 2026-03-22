@@ -16,7 +16,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/1/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -102,20 +102,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/1/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/1/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 2,
@@ -134,7 +125,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/2/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -215,20 +206,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/2/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/2/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 3,
@@ -247,7 +229,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/3/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -292,20 +274,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/3/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/3/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 4,
@@ -324,7 +297,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/4/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -405,20 +378,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/4/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/4/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 5,
@@ -437,7 +401,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/5/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -498,20 +462,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/5/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/5/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 6,
@@ -530,7 +485,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/6/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -611,20 +566,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/6/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/6/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 7,
@@ -643,7 +589,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/7/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -724,20 +670,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/7/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/7/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 8,
@@ -756,7 +693,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/8/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -837,20 +774,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/8/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/8/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 9,
@@ -869,7 +797,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/9/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -950,20 +878,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/9/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/9/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 10,
@@ -982,7 +901,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/10/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1063,20 +982,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/10/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/10/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 11,
@@ -1095,7 +1005,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/11/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1176,20 +1086,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/11/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/11/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 12,
@@ -1208,7 +1109,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/12/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1289,20 +1190,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/12/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/12/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 13,
@@ -1321,7 +1213,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/13/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1418,20 +1310,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/13/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/13/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 14,
@@ -1450,7 +1333,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/14/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1531,20 +1414,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/14/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/14/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 15,
@@ -1563,7 +1437,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/15/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1613,20 +1487,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/15/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/15/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 16,
@@ -1645,7 +1510,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/16/%E6%AD%A6%E5%99%A8/Weapon_Phaetusa_5_1024.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1716,20 +1581,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/16/%E6%AD%A6%E5%99%A8/Weapon_Phaetusa_5_1024.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/16/%E6%AD%A6%E5%99%A8/Weapon_Phaetusa_5_1024.png"
+    ]
   },
   {
     "id": 17,
@@ -1748,7 +1604,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/17/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1824,20 +1680,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/17/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/17/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 18,
@@ -1856,7 +1703,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/18/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -1937,20 +1784,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/18/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/18/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 19,
@@ -1969,7 +1807,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/19/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2081,20 +1919,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/19/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/19/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 20,
@@ -2113,7 +1942,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/20/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2225,20 +2054,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/20/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/20/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 21,
@@ -2257,7 +2077,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/21/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2369,20 +2189,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/21/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/21/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 22,
@@ -2401,7 +2212,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/22/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2482,20 +2293,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/22/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/22/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 23,
@@ -2514,7 +2316,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/23/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2564,20 +2366,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/23/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/23/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 24,
@@ -2596,7 +2389,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/24/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2739,20 +2532,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/24/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/24/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 25,
@@ -2771,7 +2555,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/25/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2811,20 +2595,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/25/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/25/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 26,
@@ -2843,7 +2618,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/26/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2913,20 +2688,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/26/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/26/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 27,
@@ -2945,7 +2711,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/27/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -2995,20 +2761,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/27/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/27/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 28,
@@ -3027,7 +2784,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/28/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -3139,20 +2896,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/28/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/28/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 29,
@@ -3171,7 +2919,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/29/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -3283,20 +3031,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/29/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/29/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 30,
@@ -3315,7 +3054,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/30/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -3396,20 +3135,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/30/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/30/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 31,
@@ -3428,7 +3158,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/31/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -3540,20 +3270,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/31/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/31/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 32,
@@ -3572,7 +3293,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/32/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -3653,20 +3374,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/32/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/32/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 33,
@@ -3685,7 +3397,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/33/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -3724,20 +3436,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/33/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/33/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 34,
@@ -3756,7 +3459,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/34/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -3868,20 +3571,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/34/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/34/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 35,
@@ -3900,7 +3594,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/35/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -3939,20 +3633,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/35/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/35/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 36,
@@ -3971,7 +3656,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/36/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4041,20 +3726,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/36/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/36/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 37,
@@ -4073,7 +3749,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/37/%E6%AD%A6%E5%99%A8/Weapon_WA2000_5_1024.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4205,20 +3881,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/37/%E6%AD%A6%E5%99%A8/Weapon_WA2000_5_1024.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/37/%E6%AD%A6%E5%99%A8/Weapon_WA2000_5_1024.png"
+    ]
   },
   {
     "id": 38,
@@ -4237,7 +3904,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/38/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4302,20 +3969,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/38/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/38/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 39,
@@ -4334,7 +3992,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/39/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4379,20 +4037,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/39/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/39/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 40,
@@ -4411,7 +4060,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/40/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4497,20 +4146,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/40/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/40/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 41,
@@ -4529,7 +4169,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/41/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4599,20 +4239,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/41/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/41/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 42,
@@ -4631,7 +4262,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/42/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4686,20 +4317,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/42/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/42/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 43,
@@ -4718,7 +4340,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/43/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4814,20 +4436,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/43/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/43/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 44,
@@ -4846,7 +4459,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/44/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -4916,20 +4529,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/44/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/44/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 45,
@@ -4948,7 +4552,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/45/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5054,20 +4658,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/45/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/45/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 46,
@@ -5086,7 +4681,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/46/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5177,20 +4772,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/46/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/46/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 47,
@@ -5209,7 +4795,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/47/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5290,20 +4876,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/47/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/47/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 48,
@@ -5322,7 +4899,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/48/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5387,20 +4964,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/48/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/48/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 49,
@@ -5419,7 +4987,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/49/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5458,20 +5026,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/49/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/49/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 50,
@@ -5490,7 +5049,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/50/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5529,20 +5088,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/50/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/50/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 51,
@@ -5561,7 +5111,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/51/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5600,20 +5150,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/51/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/51/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 52,
@@ -5632,7 +5173,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/52/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5708,20 +5249,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/52/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/52/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 53,
@@ -5740,7 +5272,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/53/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5810,20 +5342,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/53/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/53/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 54,
@@ -5842,7 +5365,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/54/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -5933,20 +5456,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/54/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/54/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 55,
@@ -5965,7 +5479,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/55/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -6067,20 +5581,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/55/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/55/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 56,
@@ -6099,7 +5604,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/56/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -6190,20 +5695,11 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/56/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/56/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   },
   {
     "id": 57,
@@ -6222,7 +5718,7 @@
     "weaponName": "武器名称",
     "weaponNameZh": "",
     "weaponNameEn": "",
-    "weaponImage": "",
+    "weaponImage": "/images/details/57/%E6%AD%A6%E5%99%A8/01.png",
     "weaponDescription": "補足待ち",
     "equipmentNote": "補足待ち",
     "galleries": [
@@ -6308,19 +5804,10 @@
             "height": 0
           }
         ]
-      },
-      {
-        "title": "武器",
-        "folderName": "武器",
-        "images": [
-          {
-            "src": "/images/details/57/%E6%AD%A6%E5%99%A8/01.png",
-            "width": 0,
-            "height": 0
-          }
-        ]
       }
     ],
-    "weaponImages": []
+    "weaponImages": [
+      "/images/details/57/%E6%AD%A6%E5%99%A8/01.png"
+    ]
   }
 ]
