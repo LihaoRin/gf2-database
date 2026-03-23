@@ -1078,4 +1078,5 @@ http://localhost:3000
 - 修正 PNG 未保留页面两倍放大效果的问题：页面中已按规则放大的图片会带上导出标记，下载 PNG 时仅对这些图片冻结当前实际渲染尺寸，确保导出结果维持页面上的两倍显示效果，同时不影响普通图片的留白表现。
 - 已回退“普通图片统一冻结实际宽高”的 PNG 导出改动，恢复为仅对页面内已放大的图片冻结当前实际尺寸；普通图片继续保留原本的 `auto + max-width/max-height` 表现，避免主图与立绘底部留白被破坏。
 - 修正刷新时图片先小后大的问题：详情页在服务端预先读取角色图与图库图片的真实尺寸，首屏即可直接按最终放大规则渲染，不再依赖浏览器 `onLoad` 后再从小图跳成两倍显示。
+- 为修复 Vercel 部署体积超限，已移除详情页服务端图片尺寸读取逻辑，避免 `public/images/details` 被打进 `characters/[id]` serverless function；页面仍保留前端按实际图片尺寸处理的逻辑。
 - 修正部署构建报错：`getDoubleScaledImageStyle` 改为接收纯尺寸元数据，避免将缺少 `src` 的 `GalleryImageMeta` 传给 `CharacterDetailGalleryImage` 类型参数而导致 TypeScript 编译失败。
