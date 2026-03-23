@@ -33,11 +33,24 @@ function shouldDoubleScaleImage(width: number, height: number) {
   return width > 1500 || height > 1500;
 }
 
+function shouldFillReferenceImage(width: number, height: number) {
+  return width > 2500 || height > 2500;
+}
+
 function getDoubleScaledImageStyle(
   image: GalleryImageMeta,
   isReferenceGallery: boolean,
   enableLargeScale: boolean
 ): CSSProperties | undefined {
+  if (isReferenceGallery && shouldFillReferenceImage(image.width, image.height)) {
+    return {
+      width: "100%",
+      height: "auto",
+      maxWidth: "100%",
+      maxHeight: "none"
+    };
+  }
+
   if (!enableLargeScale || !shouldDoubleScaleImage(image.width, image.height)) {
     return undefined;
   }
@@ -173,9 +186,17 @@ function DetailGallerySection({
   function getReferenceImageClass(image: CharacterDetailGalleryImage) {
     const resolvedImage = resolveImageMeta(image);
     const ratio = resolvedImage.width / Math.max(resolvedImage.height, 1);
+    const shouldFillImage = shouldFillReferenceImage(
+      resolvedImage.width,
+      resolvedImage.height
+    );
     const isDoubleScaled =
       enableLargeScale &&
       shouldDoubleScaleImage(resolvedImage.width, resolvedImage.height);
+
+    if (shouldFillImage) {
+      return "h-auto w-full max-w-full";
+    }
 
     if (!ratio) {
       return isDoubleScaled ? "h-auto w-auto" : "max-h-[420px] max-w-[420px]";
@@ -377,7 +398,7 @@ function DetailGallerySection({
         key={`${group.folderName}-${index}`}
         data-export-key={`gallery-card-${group.folderName}-${index}`}
         onClick={() =>
-          onOpen({
+        onOpen({
             src: image.src,
             alt: `${group.title}-${index + 1}`,
             shouldScale: shouldDoubleScaleImage(
@@ -387,7 +408,14 @@ function DetailGallerySection({
           })
         }
         className={`gf2-media-frame flex items-center justify-center overflow-hidden border border-[var(--gf2-line)] p-4 transition hover:border-[var(--gf2-accent)] ${
-          isReferenceGallery ? "min-h-[320px]" : galleryCardClass
+          isReferenceGallery
+            ? shouldFillReferenceImage(
+                resolveImageMeta(image).width,
+                resolveImageMeta(image).height
+              )
+              ? "min-h-[420px]"
+              : "min-h-[320px]"
+            : galleryCardClass
         } ${getLargeImageCardClass(image)} ${extraClassName ?? ""}`}
       >
         <img
@@ -614,13 +642,13 @@ export default function CharacterDetailPage({
                       {(themeColors.length > 0 ? themeColors : ["#F08943"]).map((color) => (
                         <span
                           key={color}
-                          className="inline-flex h-8 min-w-[84px] items-center justify-center border border-[rgba(255,255,255,0.15)] px-2 text-[11px] font-bold tracking-[0.04em]"
+                          className="gf2-theme-color-chip inline-flex h-8 min-w-[84px] items-center justify-center border border-[rgba(255,255,255,0.15)] px-2 text-[11px] font-bold tracking-[0.04em]"
                           style={{
                             backgroundColor: color,
                             color: getThemeColorTextColor(color)
                           }}
                         >
-                          {color}
+                          <span className="gf2-theme-color-chip-text">{color}</span>
                         </span>
                       ))}
                   </div>

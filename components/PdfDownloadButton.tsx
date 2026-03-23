@@ -60,7 +60,6 @@ export default function PdfDownloadButton({
           display: computedStyle.display
         };
       });
-
       const canvas = await html2canvas(target, {
         backgroundColor: "#0a0e13",
         scale: Math.max(window.devicePixelRatio || 1, 2),
@@ -149,6 +148,7 @@ export default function PdfDownloadButton({
               }
             }
           );
+
         },
         ignoreElements: (element) =>
           element instanceof HTMLElement &&

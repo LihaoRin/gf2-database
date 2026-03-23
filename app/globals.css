@@ -269,6 +269,37 @@ html.export-mode .gf2-titlebar-text {
   -webkit-font-smoothing: antialiased;
 }
 
+html.export-mode .gf2-kicker,
+html.export-mode .gf2-titlebar-text {
+  display: inline-block;
+  transform: translateY(-8px);
+}
+
+html.export-mode .gf2-kicker {
+  transform: none;
+  line-height: 1 !important;
+  padding-top: 0.05rem !important;
+  padding-bottom: 0.61rem !important;
+}
+
+html.export-mode .gf2-theme-color-chip {
+  transform: none;
+}
+
+html.export-mode .gf2-theme-color-chip-text {
+  display: inline-block;
+  transform: translateY(-8px);
+}
+
+html.export-mode .gf2-action {
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.9rem !important;
+}
+
+html.export-mode .gf2-detail-header {
+  padding-bottom: 2.5rem !important;
+}
+
 html.export-mode .gf2-hero-name {
   text-shadow: none;
 }
