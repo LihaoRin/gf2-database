@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import type {
   Character,
@@ -16,17 +15,95 @@ type CharacterDetailPageProps = {
   detail: CharacterDetail;
   galleries: CharacterDetailGalleryGroup[];
   weaponImages: string[];
+  initialCharacterImageMeta?: GalleryImageMeta | null;
 };
 
 type LightboxImage = {
   src: string;
   alt: string;
+  shouldScale: boolean;
 };
 
 type GalleryImageMeta = {
   width: number;
   height: number;
 };
+
+function shouldDoubleScaleImage(width: number, height: number) {
+  return width > 1500 || height > 1500;
+}
+
+function getDoubleScaledImageStyle(
+  image: CharacterDetailGalleryImage,
+  isReferenceGallery: boolean,
+  enableLargeScale: boolean
+): CSSProperties | undefined {
+  if (!enableLargeScale || !shouldDoubleScaleImage(image.width, image.height)) {
+    return undefined;
+  }
+
+  const maxWidth = isReferenceGallery ? 620 : 460;
+  const maxHeight = isReferenceGallery ? 620 : 520;
+  const width = Math.max(Math.min(Math.round(image.width / 2), maxWidth), 180);
+  const height = Math.max(Math.min(Math.round(image.height / 2), maxHeight), 240);
+
+  return {
+    width: `${width}px`,
+    height: `${height}px`,
+    maxWidth: "none",
+    maxHeight: "none"
+  };
+}
+
+function extractNumericStem(value: string) {
+  const match = value.match(/(\d+)(?!.*\d)/);
+  return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+}
+
+function getGalleryGroupSortKey(folderName: string): [number, number, string] {
+  if (folderName === "図鑑") {
+    return [0, 0, folderName];
+  }
+
+  const skinMatch = /^Skin(\d+)$/i.exec(folderName);
+  if (skinMatch) {
+    return [1, Number(skinMatch[1]), folderName];
+  }
+
+  if (folderName === "他の参考画像") {
+    return [2, 0, folderName];
+  }
+
+  return [3, 0, folderName];
+}
+
+function sortGalleryGroups(groups: CharacterDetailGalleryGroup[]) {
+  return [...groups].sort((a, b) => {
+    const [groupA, orderA, textA] = getGalleryGroupSortKey(a.folderName);
+    const [groupB, orderB, textB] = getGalleryGroupSortKey(b.folderName);
+
+    if (groupA !== groupB) {
+      return groupA - groupB;
+    }
+
+    if (orderA !== orderB) {
+      return orderA - orderB;
+    }
+
+    return textA.localeCompare(textB, "ja");
+  });
+}
+
+function sortGalleryImages(images: CharacterDetailGalleryImage[]) {
+  return [...images].sort((a, b) => {
+    const orderDiff = extractNumericStem(a.src) - extractNumericStem(b.src);
+    if (orderDiff !== 0) {
+      return orderDiff;
+    }
+
+    return a.src.localeCompare(b.src, "ja");
+  });
+}
 
 function resolveImage(src: string, fallback: string) {
   return src || fallback;
@@ -70,37 +147,53 @@ function DetailGallerySection({
   group: CharacterDetailGalleryGroup;
   onOpen: (image: LightboxImage) => void;
 }) {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [loadedImageSizes, setLoadedImageSizes] = useState<
+    Record<string, GalleryImageMeta>
+  >({});
   const isReferenceGallery = group.folderName === "他の参考画像";
+  const enableLargeScale = true;
   const galleryImageRatios = Object.fromEntries(
-    group.images.map((image, index) => [index, image.width / Math.max(image.height, 1)])
+    group.images.map((image, index) => {
+      const resolvedImage = loadedImageSizes[image.src] ?? image;
+      return [index, resolvedImage.width / Math.max(resolvedImage.height, 1)];
+    })
   ) as Record<number, number>;
   const galleryImageMeta = Object.fromEntries(
     group.images.map((image, index) => [
       index,
-      { width: image.width, height: image.height }
+      loadedImageSizes[image.src] ?? { width: image.width, height: image.height }
     ])
   ) as Record<number, GalleryImageMeta>;
 
+  function resolveImageMeta(image: CharacterDetailGalleryImage) {
+    return loadedImageSizes[image.src] ?? image;
+  }
+
   function getReferenceImageClass(image: CharacterDetailGalleryImage) {
-    const ratio = image.width / Math.max(image.height, 1);
+    const resolvedImage = resolveImageMeta(image);
+    const ratio = resolvedImage.width / Math.max(resolvedImage.height, 1);
+    const isDoubleScaled =
+      enableLargeScale &&
+      shouldDoubleScaleImage(resolvedImage.width, resolvedImage.height);
 
     if (!ratio) {
-      return "max-h-[420px] max-w-[420px]";
+      return isDoubleScaled ? "h-auto w-auto" : "max-h-[420px] max-w-[420px]";
     }
 
     if (ratio >= 2.2) {
-      return "max-h-[280px] w-full";
+      return isDoubleScaled ? "h-auto w-auto" : "max-h-[280px] w-full";
     }
 
     if (ratio >= 1.25) {
-      return "max-h-[360px] w-full";
+      return isDoubleScaled ? "h-auto w-auto" : "max-h-[360px] w-full";
     }
 
     if (ratio >= 0.85) {
-      return "max-h-[420px] max-w-[420px]";
+      return isDoubleScaled ? "h-auto w-auto" : "max-h-[420px] max-w-[420px]";
     }
 
-    return "max-h-[520px] max-w-[320px]";
+    return isDoubleScaled ? "h-auto w-auto" : "max-h-[520px] max-w-[320px]";
   }
 
   function getGalleryCardClass() {
@@ -150,21 +243,39 @@ function DetailGallerySection({
   }
 
   function getGalleryImageClass(image: CharacterDetailGalleryImage) {
-    const meta = {
-      width: image.width,
-      height: image.height
-    };
+    const resolvedImage = resolveImageMeta(image);
 
-    if (!meta) {
-      return "max-h-[620px] w-full";
-    }
-
-    const longestSide = Math.max(meta.width, meta.height);
-    if (longestSide > 1500) {
-      return "max-h-[620px] w-auto scale-[2]";
+    if (
+      enableLargeScale &&
+      shouldDoubleScaleImage(resolvedImage.width, resolvedImage.height)
+    ) {
+      return "h-auto w-auto";
     }
 
     return "max-h-[360px] w-full";
+  }
+
+  function getLargeImageCardClass(image: CharacterDetailGalleryImage) {
+    const resolvedImage = resolveImageMeta(image);
+
+    if (
+      !enableLargeScale ||
+      !shouldDoubleScaleImage(resolvedImage.width, resolvedImage.height)
+    ) {
+      return "";
+    }
+
+    const ratio = resolvedImage.width / Math.max(resolvedImage.height, 1);
+
+    if (ratio <= 0.45) {
+      return "min-h-[480px]";
+    }
+
+    if (ratio >= 2.2) {
+      return "min-h-[320px]";
+    }
+
+    return "min-h-[420px]";
   }
 
   function getGalleryGridClass() {
@@ -186,7 +297,11 @@ function DetailGallerySection({
       return "md:grid-cols-2 xl:grid-cols-4";
     }
 
-    return "md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5";
+    if (count === 5) {
+      return "md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5";
+    }
+
+    return "md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6";
   }
 
   function shouldStackLeadingImages() {
@@ -210,6 +325,47 @@ function DetailGallerySection({
   const stackLeadingImages = shouldStackLeadingImages();
   const galleryCardClass = getGalleryCardClass();
 
+  useEffect(() => {
+    const sectionElement = sectionRef.current;
+
+    if (!sectionElement) {
+      return;
+    }
+
+    const nextSizes: Record<string, GalleryImageMeta> = {};
+    const images = sectionElement.querySelectorAll<HTMLImageElement>(
+      "img[data-gallery-src]"
+    );
+
+    images.forEach((imageElement) => {
+      const src = imageElement.dataset.gallerySrc;
+
+      if (!src || !imageElement.complete) {
+        return;
+      }
+
+      const { naturalWidth, naturalHeight } = imageElement;
+
+      if (!naturalWidth || !naturalHeight) {
+        return;
+      }
+
+      nextSizes[src] = {
+        width: naturalWidth,
+        height: naturalHeight
+      };
+    });
+
+    if (Object.keys(nextSizes).length === 0) {
+      return;
+    }
+
+    setLoadedImageSizes((current) => ({
+      ...nextSizes,
+      ...current
+    }));
+  }, [group.images]);
+
   function renderGalleryButton(
     image: CharacterDetailGalleryImage,
     index: number,
@@ -219,19 +375,60 @@ function DetailGallerySection({
       <button
         type="button"
         key={`${group.folderName}-${index}`}
+        data-export-key={`gallery-card-${group.folderName}-${index}`}
         onClick={() =>
           onOpen({
             src: image.src,
-            alt: `${group.title}-${index + 1}`
+            alt: `${group.title}-${index + 1}`,
+            shouldScale: shouldDoubleScaleImage(
+              resolveImageMeta(image).width,
+              resolveImageMeta(image).height
+            )
           })
         }
         className={`gf2-media-frame flex items-center justify-center overflow-hidden border border-[var(--gf2-line)] p-4 transition hover:border-[var(--gf2-accent)] ${
           isReferenceGallery ? "min-h-[320px]" : galleryCardClass
-        } ${extraClassName ?? ""}`}
+        } ${getLargeImageCardClass(image)} ${extraClassName ?? ""}`}
       >
         <img
           src={image.src}
           alt={`${group.title}-${index + 1}`}
+          data-export-key={`gallery-image-${group.folderName}-${index}`}
+          data-export-enlarged={
+            shouldDoubleScaleImage(
+              resolveImageMeta(image).width,
+              resolveImageMeta(image).height
+            )
+              ? "true"
+              : undefined
+          }
+          data-gallery-src={image.src}
+          onLoad={(event) => {
+            const { naturalWidth, naturalHeight } = event.currentTarget;
+            setLoadedImageSizes((current) => {
+              const existing = current[image.src];
+
+              if (
+                existing?.width === naturalWidth &&
+                existing?.height === naturalHeight
+              ) {
+                return current;
+              }
+
+              return {
+                ...current,
+                [image.src]: {
+                  width: naturalWidth,
+                  height: naturalHeight
+                }
+              };
+            });
+          }}
+          style={getDoubleScaledImageStyle(
+            resolveImageMeta(image),
+            isReferenceGallery,
+            enableLargeScale
+          )}
           className={`h-auto transform-gpu object-contain ${
             isReferenceGallery
               ? getReferenceImageClass(image)
@@ -250,6 +447,8 @@ function DetailGallerySection({
         </span>
       </div>
       <div
+        data-export-key={`gallery-grid-${group.folderName}`}
+        ref={sectionRef}
         className={`grid gap-4 p-4 ${
           isReferenceGallery
             ? "grid-cols-1"
@@ -257,7 +456,10 @@ function DetailGallerySection({
         }`}
       >
         {stackLeadingImages ? (
-          <div className={`grid content-start gap-4 ${galleryCardClass}`}>
+          <div
+            data-export-key={`gallery-stack-${group.folderName}`}
+            className={`grid content-start gap-4 ${galleryCardClass}`}
+          >
             {renderGalleryButton(group.images[0], 0, "min-h-0 h-full")}
             {renderGalleryButton(group.images[1], 1, "min-h-0 h-full")}
           </div>
@@ -278,9 +480,19 @@ export default function CharacterDetailPage({
   character,
   detail,
   galleries,
-  weaponImages
+  weaponImages,
+  initialCharacterImageMeta
 }: CharacterDetailPageProps) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null);
+  const [shouldScaleCharacterImage, setShouldScaleCharacterImage] = useState(
+    Boolean(
+      initialCharacterImageMeta &&
+      shouldDoubleScaleImage(
+        initialCharacterImageMeta.width,
+        initialCharacterImageMeta.height
+      )
+    )
+  );
   const displayName = character.name.ja || character.name.zh;
   const profileTitle = resolveText(detail.profileTitle, displayName);
   const downloadName = sanitizeDownloadName(character.name.ja || profileTitle || `character-${character.id}`);
@@ -312,7 +524,12 @@ export default function CharacterDetailPage({
     }
   ];
 
-  const galleryGroups = galleries.filter((group) => group.images.length > 0);
+  const galleryGroups = sortGalleryGroups(galleries)
+    .map((group) => ({
+      ...group,
+      images: sortGalleryImages(group.images)
+    }))
+    .filter((group) => group.images.length > 0);
   const resolvedWeaponImage =
     weaponImages[0] || resolveImage(detail.weaponImage, "");
   const shouldShowWeapon =
@@ -343,7 +560,7 @@ export default function CharacterDetailPage({
   return (
     <main
       id="character-detail-page-export"
-      className="gf2-detail-page mx-auto min-h-screen max-w-[1480px] px-4 py-4 sm:px-5 lg:px-6 lg:py-6"
+      className="gf2-detail-page mx-auto min-h-screen max-w-[1760px] px-4 py-4 sm:px-5 lg:px-6 lg:py-6"
     >
       <div className="mb-4 flex items-center justify-between print:hidden">
         <Link
@@ -417,20 +634,37 @@ export default function CharacterDetailPage({
           </div>
         </div>
 
-        <div className="grid gap-6 p-5 lg:grid-cols-[360px_minmax(0,1fr)]">
+        <div
+          data-export-key="detail-main-grid"
+          className="grid gap-6 p-5 lg:grid-cols-[360px_minmax(0,1fr)]"
+        >
           <div className="space-y-4">
-            <div className="gf2-media-frame relative block aspect-[7/10] w-full overflow-hidden border border-[var(--gf2-line-strong)]">
-              <Image
+            <div
+              data-export-key="character-portrait-frame"
+              className="gf2-character-portrait-frame gf2-media-frame flex aspect-[7/10] w-full items-center justify-center overflow-hidden border border-[var(--gf2-line-strong)]"
+              style={{ aspectRatio: "7 / 10" }}
+            >
+              <img
                 src={character.image}
                 alt={displayName}
-                fill
-                sizes="(max-width: 1024px) 100vw, 360px"
-                className="object-contain"
+                data-export-key="character-portrait-image"
+                data-export-enlarged={shouldScaleCharacterImage ? "true" : undefined}
+                onLoad={(event) =>
+                  setShouldScaleCharacterImage(
+                    shouldDoubleScaleImage(
+                      event.currentTarget.naturalWidth,
+                      event.currentTarget.naturalHeight
+                    )
+                  )
+                }
+                className={`gf2-character-portrait-image h-full w-full object-contain ${
+                  shouldScaleCharacterImage ? "scale-[2]" : ""
+                }`}
               />
             </div>
           </div>
 
-          <div className="space-y-5">
+          <div data-export-key="detail-gallery-column" className="space-y-5">
             {galleryGroups.map((group) => (
               <DetailGallerySection
                 key={group.folderName}
@@ -444,23 +678,35 @@ export default function CharacterDetailPage({
                 <div className="gf2-titlebar border-b border-[var(--gf2-line)] px-4 py-2 text-sm font-semibold tracking-[0.08em] text-[var(--gf2-text)]">
                   <span className="gf2-titlebar-text">武器</span>
                 </div>
-                <div className="grid gap-4 p-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(320px,0.7fr)]">
+                <div
+                  data-export-key="weapon-section-grid"
+                  className="grid gap-4 p-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(320px,0.7fr)]"
+                >
                   <button
                     type="button"
+                    data-export-key="weapon-frame"
                     onClick={() =>
                       setLightboxImage({
                         src: resolvedWeaponImage || character.image,
-                        alt: resolveText(detail.weaponName, displayName)
+                        alt: resolveText(detail.weaponName, displayName),
+                        shouldScale: false
                       })
                     }
-                    className="gf2-media-frame relative block aspect-[4/3] w-full overflow-hidden border border-[var(--gf2-line)] transition hover:border-[var(--gf2-accent)]"
+                    className="gf2-weapon-frame gf2-media-frame flex aspect-[4/3] w-full items-center justify-center overflow-hidden border border-[var(--gf2-line)] transition hover:border-[var(--gf2-accent)]"
                   >
-                    <Image
+                    <img
                       src={resolvedWeaponImage || character.image}
                       alt={resolveText(detail.weaponName, displayName)}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 320px"
-                      className="object-contain"
+                      data-export-key="weapon-image"
+                      data-export-enlarged={
+                        shouldDoubleScaleImage(
+                          initialCharacterImageMeta?.width ?? 0,
+                          initialCharacterImageMeta?.height ?? 0
+                        )
+                          ? "true"
+                          : undefined
+                      }
+                      className="gf2-weapon-image h-full w-full object-contain"
                     />
                   </button>
                   <div className="space-y-4">
@@ -506,7 +752,7 @@ export default function CharacterDetailPage({
               <img
                 src={lightboxImage.src}
                 alt={lightboxImage.alt}
-                className="h-auto max-h-[80vh] w-auto max-w-full object-contain"
+                className="gf2-lightbox-image h-auto max-h-[80vh] w-auto max-w-full object-contain"
               />
             </div>
           </div>

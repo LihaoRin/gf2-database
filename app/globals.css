@@ -255,6 +255,12 @@ body::before {
     inset 0 0 0 1px rgba(255, 255, 255, 0.025);
 }
 
+.gf2-character-portrait-image,
+.gf2-lightbox-image,
+.gf2-weapon-image {
+  transform-origin: center;
+}
+
 html.export-mode .gf2-hero-name,
 html.export-mode .gf2-kicker,
 html.export-mode .gf2-card-label,

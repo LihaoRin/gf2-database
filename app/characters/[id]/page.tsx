@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import CharacterDetailPage from "@/components/CharacterDetailPage";
 import characters from "@/data/characters.json";
 import characterDetails from "@/data/character-details.json";
+import { getImageSize } from "@/lib/server-image-size";
 import type { Character, CharacterDetail } from "@/lib/types";
 
 const characterList = characters as Character[];
@@ -51,13 +52,40 @@ export default async function CharacterDetailRoute({
   const detail =
     detailList.find((entry) => entry.id === numericId) ??
     createFallbackDetail(character);
+  const [characterImageMeta, hydratedGalleries] = await Promise.all([
+    getImageSize(character.image),
+    Promise.all(
+      detail.galleries.map(async (group) => ({
+        ...group,
+        images: await Promise.all(
+          group.images.map(async (image) => {
+            if (image.width > 0 && image.height > 0) {
+              return image;
+            }
+
+            const imageMeta = await getImageSize(image.src);
+            if (!imageMeta) {
+              return image;
+            }
+
+            return {
+              ...image,
+              width: imageMeta.width,
+              height: imageMeta.height
+            };
+          })
+        )
+      }))
+    )
+  ]);
 
   return (
     <CharacterDetailPage
       character={character}
       detail={detail}
-      galleries={detail.galleries}
+      galleries={hydratedGalleries}
       weaponImages={detail.weaponImages}
+      initialCharacterImageMeta={characterImageMeta}
     />
   );
 }
