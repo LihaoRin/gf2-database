@@ -34,7 +34,7 @@ function shouldDoubleScaleImage(width: number, height: number) {
 }
 
 function getDoubleScaledImageStyle(
-  image: CharacterDetailGalleryImage,
+  image: GalleryImageMeta,
   isReferenceGallery: boolean,
   enableLargeScale: boolean
 ): CSSProperties | undefined {
