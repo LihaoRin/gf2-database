@@ -57,8 +57,12 @@ function getDoubleScaledImageStyle(
 
   const maxWidth = isReferenceGallery ? 620 : 460;
   const maxHeight = isReferenceGallery ? 620 : 520;
-  const width = Math.max(Math.min(Math.round(image.width / 2), maxWidth), 180);
-  const height = Math.max(Math.min(Math.round(image.height / 2), maxHeight), 240);
+  const desiredScale = 0.5;
+  const maxScaleByWidth = maxWidth / Math.max(image.width, 1);
+  const maxScaleByHeight = maxHeight / Math.max(image.height, 1);
+  const scale = Math.min(desiredScale, maxScaleByWidth, maxScaleByHeight);
+  const width = Math.max(Math.round(image.width * scale), 1);
+  const height = Math.max(Math.round(image.height * scale), 1);
 
   return {
     width: `${width}px`,

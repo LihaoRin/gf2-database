@@ -48,13 +48,21 @@ export default function PdfDownloadButton({
         const key = element.dataset.exportKey;
         const rect = element.getBoundingClientRect();
         const computedStyle = window.getComputedStyle(element);
+        const computedWidth = Math.ceil(
+          Number.parseFloat(computedStyle.width) || rect.width
+        );
+        const computedHeight = Math.ceil(
+          Number.parseFloat(computedStyle.height) || rect.height
+        );
 
         return {
           key,
           tagName: element.tagName,
           exportEnlarged: element.dataset.exportEnlarged === "true",
-          width: Math.ceil(rect.width),
-          height: Math.ceil(rect.height),
+          width: element.tagName === "IMG" ? computedWidth : Math.ceil(rect.width),
+          height:
+            element.tagName === "IMG" ? computedHeight : Math.ceil(rect.height),
+          aspectRatio: computedStyle.aspectRatio,
           objectFit: computedStyle.objectFit,
           objectPosition: computedStyle.objectPosition,
           display: computedStyle.display
@@ -100,6 +108,7 @@ export default function PdfDownloadButton({
               exportEnlarged,
               width,
               height,
+              aspectRatio,
               objectFit,
               objectPosition,
               display
@@ -116,24 +125,45 @@ export default function PdfDownloadButton({
                 return;
               }
 
+              const isGalleryImage = key.startsWith("gallery-image-");
               clonedElement.style.boxSizing = "border-box";
               clonedElement.style.display = display;
 
+              if (aspectRatio && aspectRatio !== "auto") {
+                clonedElement.style.aspectRatio = aspectRatio;
+              }
+
               if (tagName === "IMG") {
-                if (exportEnlarged) {
+                if (isGalleryImage) {
+                  if (exportEnlarged) {
+                    clonedElement.style.width = `${width}px`;
+                    clonedElement.style.minWidth = `${width}px`;
+                    clonedElement.style.maxWidth = `${width}px`;
+                    clonedElement.style.height = `${height}px`;
+                    clonedElement.style.minHeight = `${height}px`;
+                    clonedElement.style.maxHeight = `${height}px`;
+                  } else {
+                    clonedElement.style.width = "auto";
+                    clonedElement.style.minWidth = "0";
+                    clonedElement.style.maxWidth = `${width}px`;
+                    clonedElement.style.height = "auto";
+                    clonedElement.style.minHeight = "0";
+                    clonedElement.style.maxHeight = `${height}px`;
+                  }
+                } else if (key === "character-portrait-image") {
+                  clonedElement.style.width = "auto";
+                  clonedElement.style.minWidth = "0";
+                  clonedElement.style.maxWidth = `${width}px`;
+                  clonedElement.style.height = "auto";
+                  clonedElement.style.minHeight = "0";
+                  clonedElement.style.maxHeight = `${height}px`;
+                } else {
                   clonedElement.style.width = `${width}px`;
                   clonedElement.style.minWidth = `${width}px`;
                   clonedElement.style.maxWidth = `${width}px`;
                   clonedElement.style.height = `${height}px`;
                   clonedElement.style.minHeight = `${height}px`;
                   clonedElement.style.maxHeight = `${height}px`;
-                } else {
-                  clonedElement.style.width = "auto";
-                  clonedElement.style.minWidth = "0";
-                  clonedElement.style.maxWidth = "100%";
-                  clonedElement.style.height = "auto";
-                  clonedElement.style.minHeight = "0";
-                  clonedElement.style.maxHeight = "100%";
                 }
                 clonedElement.style.objectFit = objectFit;
                 clonedElement.style.objectPosition = objectPosition;
